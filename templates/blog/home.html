@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}blog home{% endblock title %}
+{% block title %}abel's blog{% endblock title %}
 {% block content %}
 
 <style>
@@ -30,10 +30,11 @@
     <div>
         {% for blog_post in blog_posts %}
         <div class="card text-left my-3">
-            <div class="card-header ">
-                <a data-toggle="collapse" href="#{{blog_post.title}}" aria-expanded="true" aria-controls="test-block">
-                    {{blog_post.title}}
+            <div class="card-header row">
+                <a class="col" data-toggle="collapse" href="#{{blog_post.title}}" aria-expanded="true" aria-controls="test-block">
+                    {{blog_post.number}}
                 </a>
+                <p class="col m-0 text-right">{{blog_post.title}}</p>
             </div>
             <div id="{{blog_post.title}}" class="collapse my-3 mx-3">
                 <div class="card-block">

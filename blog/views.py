@@ -6,7 +6,11 @@ from django.shortcuts import render
 def home(request):
     context = {}
     blog_posts = [
-        {'title': "#0 my frist blog post", 'content': "this is my first blog post"},
+        {
+        'number':'#0', 
+        'title': "my frist blog post", 
+        'content': "this is my first blog post"
+        },
         #{'title': "#1   ", 'content': "this is my second blog post"},
     ]
 
