@@ -9,7 +9,7 @@ def home(request):
         {
         'number':'#0', 
         'title': "my frist blog post", 
-        'content': "this is my first blog post"
+        'content': "integrations are where the money is at. "
         },
         #{'title': "#1   ", 'content': "this is my second blog post"},
     ]
