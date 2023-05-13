@@ -11,6 +11,12 @@ def home(request):
         'title': "my frist blog post", 
         'content': "integrations are where the money is at. "
         },
+        {
+        'number':'#1', 
+        'title': "defining a central path", 
+        'content': "it's goot to have guding documents even if just in the context of this blog. this is mine.",
+    
+        },
         #{'title': "#1   ", 'content': "this is my second blog post"},
     ]
 
