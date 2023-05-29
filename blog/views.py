@@ -27,21 +27,21 @@ def home(request):
         the farther i stray from this phrase the more work feels like drudgery. 
         fair to say the word <b>automated</b> is carrying a lot of the weight.
         data processing is what humans do exeptionally well and information technology is becoming all-prevasive.
-
         """,
         'embed':"gewerbe.png"
-        },{
+        },
+        {
         'number':'#0', 
         'date':'2023 feb 4', 
         'title': "my frist blog post", 
-        'content': "integrations are where the money is at. ",
+        'content': "hello, I'm abel and I'm trying to work in the IOT agriculture industry.",
         'embed':"blog_0.png"
         },
         
         #{'title': "#1   ", 'content': "this is my second blog post"},
     ]
 
-    context['blog_posts'] = blog_posts
+    context['blog_posts'] = blog_posts[-1]
 
 
     return render(request, 'blog/home.html', context=context)
