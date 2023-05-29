@@ -41,7 +41,7 @@ def home(request):
         #{'title': "#1   ", 'content': "this is my second blog post"},
     ]
 
-    context['blog_posts'] = blog_posts[-1]
+    context['blog_posts'] = [blog_posts[-1]]
 
 
     return render(request, 'blog/home.html', context=context)
