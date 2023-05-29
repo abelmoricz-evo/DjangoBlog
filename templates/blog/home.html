@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}abel's blog{% endblock title %}
 {% block content %}
@@ -11,7 +12,7 @@
         color: whitesmoke;
     }
     .card{
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba(0,0,0,0.7);
         border-radius: 0px !important;
     }
     a{
@@ -26,20 +27,30 @@
 
 <div class="m-5 p-5 col-6 mx-auto">
     <h1>blog</h1>
-    <p>welcome to my blog</p>
-
+    
     <div>
         {% for blog_post in blog_posts %}
         <div class="card text-left my-3">
             <div class="card-header row">
                 <a class="col" data-toggle="collapse" href="#{{blog_post.title}}" aria-expanded="true" aria-controls="test-block">
-                    {{blog_post.number}}
+                    {{blog_post.number}} 
                 </a>
-                <p class="col m-0 text-right">{{blog_post.title}}</p>
+                <a class="col m-0 text-right"  data-toggle="collapse" href="#{{blog_post.title}}" aria-expanded="true" aria-controls="test-block">
+                    {{blog_post.title}}
+                </a>
             </div>
             <div id="{{blog_post.title}}" class="collapse my-3 mx-3">
                 <div class="card-block">
-                    {{blog_post.content}}
+                    {{blog_post.date}}
+                    <br />
+                    {{blog_post.content | safe}}
+                    <br />
+                    {% if blog_post.embed %}
+                    <div class="mt-5 mb-2">
+                        <img src="{% static blog_post.embed %}" width="100%"/>
+                    </div>
+                    {% endif %}
+                    
                 </div>
             </div>
         </div>   

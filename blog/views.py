@@ -6,17 +6,38 @@ from django.shortcuts import render
 def home(request):
     context = {}
     blog_posts = [
+        
         {
-        'number':'#0', 
-        'title': "my frist blog post", 
-        'content': "integrations are where the money is at. "
-        },
-        {
+        'number':'#3', 
+        'date':'2023 may 26', 
+        'title': "AS IS - TO BE diagram", 
+        'content': "",
+        },{
+        'number':'#2', 
+        'date':'2023 may 26', 
+        'title': "opc ua", 
+        'content': "",
+        },{
         'number':'#1', 
-        'title': "defining a central path", 
-        'content': "it's goot to have guding documents even if just in the context of this blog. this is mine.",
-    
+        'date':'2023 apr 10', 
+        'title': "the central path", 
+        'content': """in conventional contexts (e.g school, work) I sign a syllabys or contract with predefined rights and duties.
+        what is my guding principle for the work i love to do? \n
+        <i>automated data processing and information technology</i> \n
+        the farther i stray from this phrase the more work feels like drudgery. 
+        fair to say the word <b>automated</b> is carrying a lot of the weight.
+        data processing is what humans do exeptionally well and information technology is becoming all-prevasive.
+
+        """,
+        'embed':"gewerbe.png"
+        },{
+        'number':'#0', 
+        'date':'2023 feb 4', 
+        'title': "my frist blog post", 
+        'content': "integrations are where the money is at. ",
+        'embed':"blog_0.png"
         },
+        
         #{'title': "#1   ", 'content': "this is my second blog post"},
     ]
 
